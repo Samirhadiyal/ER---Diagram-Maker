@@ -34,3 +34,22 @@ ER-Diagram Maker is a web-based tool for creating Entity-Relationship diagrams w
 - ✅ Preloaded sample diagrams  
 
 ---
+## 📁 File Structure  
+
+
+er_maker/
+├── 📁 .vscode/
+│   └──  settings.json           
+├── 📁 public/                     
+│   ├──  index.html             
+│   ├──  style.css              
+│   └──  script.js              
+├── 📁 server/                    
+│   ├──  export_sql.php         
+│   └──  save_diagram.php       
+├──  config.php                 
+├──  connection_handler         
+└── 📁 diagrams/                  
+    ├──  latest_diagram.json
+    ├──  diagram_*.json
+    └──  diagram_*.sql
