@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ER Diagram Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.15.6/js/jsplumb.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</head>
+<body>
+    <h1>ER Diagram Tool</h1>
+    
+    <div class="toolbar">
+        <div class="tool-group shapes-group">
+            <select id="entityType">
+                <option id="sRect" value="rectangle">Rectangle</option>
+                <option id="sDaimo" value="diamond">Diamond</option>
+                <option id="sElli" value="ellipse">Ellipse</option>
+                <option id="sArrow" value="arrow">Arrow Mode</option>
+            </select>
+            <button id="addEntity">Add Shape</button>
+        </div>
+        
+        <div class="tool-group connection-group">
+            <button id="connModeBtn" class="toggle-btn">Toggle Connection Mode</button>
+            <div id="connectionStatus">Connection Mode: Inactive</div>
+        </div>
+        
+        <div class="tool-group action-group">
+            <button id="saveDiagram">Save Diagram</button>
+            <button id="clearCanvas">Clear Canvas</button>
+        </div>
+    </div>
+    
+    <div id="canvas"></div>
+    
+    <div class="instructions">
+        <h3>How to Create Connections:</h3>
+        <ol>
+            <li><strong>Step 1:</strong> Click "Toggle Connection Mode" button or select "Arrow Mode" from dropdown</li>
+            <li><strong>Step 2:</strong> While in connection mode, click and <strong>drag</strong> from one entity to another</li>
+            <li><strong>Step 3:</strong> Release the mouse to complete the connection with an arrow</li>
+            <li><strong>Step 4:</strong> Click "Toggle Connection Mode" again to exit connection mode</li>
+        </ol>
+        <p><strong>Tip:</strong> You can create multiple connections before exiting connection mode</p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
